@@ -22,11 +22,12 @@ public class LogicScript : MonoBehaviour
     public void LoseLife()
     {
         currentLives -= 1;
-        livesText.text = currentLives.ToString();
+        livesText.text = "Lives: " + currentLives.ToString();
 
-        if(currentLives <= 0)
+        if (currentLives <= 0)
         {
             Debug.Log("Game Over!");
+            Time.timeScale = 0f;
         }
     }
 
