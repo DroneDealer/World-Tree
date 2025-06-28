@@ -1,27 +1,33 @@
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
 
 public class LogicScript : MonoBehaviour
 {
     public int playerScore;
-    public Text scoreText;
+    public TextMeshProUGUI scoreText;
 
     public int currentLives;    //public GameObject GameOverScreen;
-    public Text livesText;
+    public TextMeshProUGUI livesText;
+
+    void Start()
+    {
+        scoreText.text = "Score: " + playerScore.ToString();
+        livesText.text = "Lives: " + currentLives.ToString();
+    }
 
     [ContextMenu("Increase Score")]
-    public void addScore()
+    public void addScore(int value)
     {
-        playerScore = playerScore + 1;
-        scoreText.text = playerScore.ToString();
+        playerScore += value;
+        scoreText.text = "Score: " + playerScore.ToString();
     }
 
     [ContextMenu("Lose A Life")]
     public void LoseLife()
     {
-        currentLives -= 1;
+        currentLives = currentLives - 1;
         livesText.text = "Lives: " + currentLives.ToString();
 
         if (currentLives <= 0)

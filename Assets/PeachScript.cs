@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Starfruit : MonoBehaviour
+public class Peach : MonoBehaviour
 {
     public LogicScript Logic;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -16,7 +16,7 @@ public class Starfruit : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Logic.addScore();
+        Logic.addScore(1);
         Destroy(gameObject);
     }
 }
