@@ -6,13 +6,17 @@ public class GameOver : MonoBehaviour
 {
     public GameObject gameOverCanvas;
     public TextMeshProUGUI finalScoreText;
+
+    public TextMeshProUGUI highScoreText;
     public LogicScript logicScript;
 
     public void GameOverNow()
     {
+        logicScript.CheckHighScore();
         gameOverCanvas.SetActive(true);
         Time.timeScale = 0f;
         finalScoreText.text = "Score: " + logicScript.playerScore.ToString();
+        highScoreText.text = "High Score: " + logicScript.GetHighScore().ToString();
     }
 
     public void RestartGame()
