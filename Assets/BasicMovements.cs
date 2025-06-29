@@ -39,9 +39,12 @@ public class BasicMovements : MonoBehaviour
 
         IsDead = true;
         animator.SetBool("IsDead", true);
-        speed = 0f;
-        animator.Play("DeathAnimation", 0, 0f);
+        Debug.Log("Die called. IsDead param set to true");
 
+        animator.Play("DeathAnimation", 0, 0f);
+        Debug.Log("Forced animation play");
+
+        speed = 0f;
         Collider2D col = GetComponent<Collider2D>();
         if (col != null)
         {
@@ -57,7 +60,21 @@ public class BasicMovements : MonoBehaviour
     }
     private IEnumerator DelayedGameOver()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(1f);
+
+        foreach (GameObject obj in GameObject.FindObjectsOfType<GameObject>())
+        {
+            if (obj.CompareTag("GameController") || obj.CompareTag("GameOverUI") || obj.CompareTag("MainCamera") || obj.name == "EventSystem")
+            {
+                continue;
+            }
+            if (obj != this.gameObject)
+            {
+                obj.SetActive(false);
+            }
+        }
+        this.gameObject.SetActive(false);
+
         FindObjectOfType<GameOver>().GameOverNow();
     }
 }

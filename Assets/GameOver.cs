@@ -12,12 +12,12 @@ public class GameOver : MonoBehaviour
     {
         gameOverCanvas.SetActive(true);
         Time.timeScale = 0f;
-        gameOverCanvas.SetActive(true);
         finalScoreText.text = "Score: " + logicScript.playerScore.ToString();
     }
 
     public void RestartGame()
     {
+        Debug.Log("Restart Button clicked");
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
