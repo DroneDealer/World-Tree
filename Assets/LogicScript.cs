@@ -33,17 +33,7 @@ public class LogicScript : MonoBehaviour
         if (currentLives <= 0)
         {
             Debug.Log("Game Over!");
-            Time.timeScale = 0f;
+            GameObject.FindWithTag("Player").GetComponent<BasicMovements>().Die();
         }
     }
-
-    // public void restartGame()
-    // {
-    //     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    // }
-
-    // public void gameOver()
-    // {
-    //     GameOverScreen.SetActive(true);
-    // }
 }
