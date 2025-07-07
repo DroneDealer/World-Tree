@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a780e8d8bae594eb6933e6cee4bd69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruit: {fileID: 0}
+  fruits: []
   spawnRate: 2
   widthOffset: 14
 --- !u!114 &493973592929771357
@@ -180,5 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 2
+  essenceAmount: 10
   IsBadFruit: 0
+  essenceManager: {fileID: 0}
   Logic: {fileID: 0}

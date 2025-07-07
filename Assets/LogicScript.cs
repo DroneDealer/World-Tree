@@ -12,7 +12,7 @@ public class LogicScript : MonoBehaviour
     public TextMeshProUGUI highScoreText;
     [Header("Lives")]
     public int currentLives;    //public GameObject GameOverScreen;
-    public TextMeshProUGUI livesText;    
+    public TextMeshProUGUI livesText;
     [Header("Essence Management")]
     public int essenceAmount;
     public TextMeshProUGUI essenceText;
@@ -64,5 +64,17 @@ public class LogicScript : MonoBehaviour
     public int GetHighScore()
     {
         return PlayerPrefs.GetInt("highScore", 0);
+    }
+
+    [ContextMenu("Reset High Score")]
+    public void ResetHighScore()
+    {
+        PlayerPrefs.DeleteKey("highScore");
+        PlayerPrefs.Save();
+        Debug.Log("High score reset.");
+        if (highScoreText != null)
+        {
+            highScoreText.text = "High Score: 0";
+        }
     }
 }

@@ -164,5 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 5
+  essenceAmount: 15
   IsBadFruit: 0
+  essenceManager: {fileID: 0}
   Logic: {fileID: 0}
