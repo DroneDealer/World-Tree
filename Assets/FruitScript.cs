@@ -3,11 +3,14 @@ using UnityEngine;
 public class FruitScript : MonoBehaviour
 {
     public int scoreValue = 1;
+    public int essenceAmount = 1;
     public bool IsBadFruit = false;
+    public EssenceCurrencyManager essenceManager;
     public LogicScript Logic;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        essenceManager = GameObject.FindObjectOfType<EssenceCurrencyManager>();
         Logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
     }
 
@@ -21,6 +24,7 @@ public class FruitScript : MonoBehaviour
         else
         {
             Logic.addScore(scoreValue);
+            essenceManager.AddToEssenceAmount(essenceAmount);
             Destroy(gameObject);
         }
     }

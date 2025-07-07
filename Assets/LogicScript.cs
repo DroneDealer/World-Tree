@@ -6,13 +6,16 @@ using Unity.VisualScripting;
 public class LogicScript : MonoBehaviour
 
 {
+    [Header("Score")]
     public int playerScore;
     public TextMeshProUGUI scoreText;
-
-    public int currentLives;    //public GameObject GameOverScreen;
-    public TextMeshProUGUI livesText;
     public TextMeshProUGUI highScoreText;
-
+    [Header("Lives")]
+    public int currentLives;    //public GameObject GameOverScreen;
+    public TextMeshProUGUI livesText;    
+    [Header("Essence Management")]
+    public int essenceAmount;
+    public TextMeshProUGUI essenceText;
     void Start()
     {
         scoreText.text = "Score: " + playerScore.ToString();
