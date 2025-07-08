@@ -19,6 +19,8 @@ public class BasicMovements : MonoBehaviour
         {
             return;
         }
+        Debug.Log("AutoWalking: " + AutoWalking);
+        Debug.Log("shopEntranceTarget: " + (shopEntranceTarget != null));
         if (AutoWalking && shopEntranceTarget != null)
         {
             Vector3 TargetPos = new Vector3(shopEntranceTarget.position.x, transform.position.y, transform.position.z);
@@ -29,11 +31,12 @@ public class BasicMovements : MonoBehaviour
             else if (TargetPos.x < transform.position.x)
             {
                 spriteRenderer.flipX = true;
-            } 
+            }
             animator.SetFloat("Speed", 1f);
             transform.position = Vector3.MoveTowards(transform.position, TargetPos, speed * Time.deltaTime);
-            if (Vector3.Distance(transform.position, TargetPos) < 0.05f)
+            if (Vector3.Distance(transform.position, TargetPos) < 0.15f)
             {
+                Debug.Log("Re3ached shop entrance");
                 AutoWalking = false;
                 animator.SetFloat("Speed", 0f);
                 FindObjectOfType<ShopWindow>().showShop();

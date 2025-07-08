@@ -10,7 +10,15 @@ public class ShopWindow : MonoBehaviour
 
     public void showShop()
     {
-        shopWindowCanvas.SetActive(true);
+        Debug.Log("Showing shop");
+        if (shopWindowCanvas != null)
+        {
+            shopWindowCanvas.SetActive(true);
+        }
+        else
+        {
+            Debug.LogWarning("No shopWindowCanvas assigned");
+        }
     }
 
     public void hideShop()
@@ -19,18 +27,20 @@ public class ShopWindow : MonoBehaviour
     }
     public void WalkToShop()
     {
-        Debug.Log("Walk to shop called");
-        player.SetActive(true);
-        GameOverCanvas.SetActive(false);
+        Debug.Log("Start of WalkToShop()");
+        if (player == null || entryPoint == null)
+        {
+            Debug.LogError("Either 'player' or 'entryPoint' is null");
+            return;
+        }
+        if (GameOverCanvas != null)
+        {
+            GameOverCanvas.SetActive(false);
+            Debug.Log("Game Over canvas deactivated");
+        }
         BasicMovements playerMovement = player.GetComponent<BasicMovements>();
-        if (playerMovement != null && entryPoint != null)
-        {
-            playerMovement.shopEntranceTarget = entryPoint;
-            playerMovement.AutoWalking = true;
-        }
-        else
-        {
-            Debug.LogWarning("Missing player or entry point reference!");
-        }
+        Debug.Log("Setting shop target and enabling AutoWalking");
+        playerMovement.shopEntranceTarget = entryPoint;
+        playerMovement.AutoWalking = true;
     }
 }
