@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Logic: {fileID: 0}
   moveSpeed: 3
-  deadZone: -6
+  deadZone: -3
 --- !u!114 &5929815016613023572
 MonoBehaviour:
   m_ObjectHideFlags: 0

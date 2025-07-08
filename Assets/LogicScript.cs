@@ -11,7 +11,7 @@ public class LogicScript : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI highScoreText;
     [Header("Lives")]
-    public int currentLives;    //public GameObject GameOverScreen;
+    public int currentLives;
     public TextMeshProUGUI livesText;
     [Header("Essence Management")]
     public int essenceAmount;
