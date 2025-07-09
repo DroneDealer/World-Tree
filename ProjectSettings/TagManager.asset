@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Logic
   - GameOverUI
+  - ShopWindowUI
   layers:
   - Default
   - TransparentFX
