@@ -13,9 +13,6 @@ public class LogicScript : MonoBehaviour
     [Header("Lives")]
     public int currentLives;
     public TextMeshProUGUI livesText;
-    [Header("Essence Management")]
-    public int essenceAmount;
-    public TextMeshProUGUI essenceText;
     void Start()
     {
         scoreText.text = "Score: " + playerScore.ToString();

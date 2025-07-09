@@ -3,66 +3,22 @@ using UnityEngine;
 
 public class BasicMovements : MonoBehaviour
 {
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public Animator animator;
     public float speed = 5f;
     private bool IsDead = false;
     private SpriteRenderer spriteRenderer;
-    private bool _autoWalking;
-    public bool AutoWalking
-        {
-            get => _autoWalking;
-            set
-            {
-                _autoWalking = value;
-                Debug.Log($"[AutoWalking SET] New value: {_autoWalking}");
-            }
-        }
-    public Transform shopEntranceTarget;
+
+    // Update is called once per frame
+
     void Start()
     {
-        Debug.Log($"[BasicMovements] Start on: {gameObject.name}, instance ID: {GetInstanceID()}");
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
     void Update()
     {
-        Debug.Log("Update running");
-        Debug.Log($"[Update] AutoWalking: {AutoWalking}, Target null? {shopEntranceTarget == null}");
-        Debug.Log($"Update running - AutoWalking: {AutoWalking}, Target: {shopEntranceTarget}");
         if (IsDead)
         {
-            return;
-        }
-        if (AutoWalking && shopEntranceTarget == null)
-        {
-            Debug.LogWarning("AutoWalking is true but shopEntranceTarget is STILL null!");
-        }
-        //Debug.Log("AutoWalking: " + AutoWalking);
-        //Debug.Log("shopEntranceTarget: " + (shopEntranceTarget != null));
-        if (AutoWalking && shopEntranceTarget != null)
-        {
-            Debug.Log("Autowalking block running");
-            Vector3 TargetPos = new Vector3(shopEntranceTarget.position.x, transform.position.y, transform.position.z);
-            Debug.Log($"Target position: {TargetPos}, Player position: {transform.position}");
-            if (TargetPos.x > transform.position.x)
-            {
-                spriteRenderer.flipX = false;
-            }
-            else if (TargetPos.x < transform.position.x)
-            {
-                spriteRenderer.flipX = true;
-            }
-            animator.SetFloat("Speed", 1f);
-            Debug.Log($"Moving player from {transform.position} towards {TargetPos}");
-
-            transform.position = Vector3.MoveTowards(transform.position, TargetPos, speed * Time.deltaTime);
-            Debug.Log("player is autowalking");
-            if (Vector3.Distance(transform.position, TargetPos) < 0.15f)
-            {
-                Debug.Log("Re3ached shop entrance");
-                AutoWalking = false;
-                animator.SetFloat("Speed", 0f);
-                FindObjectOfType<ShopWindow>().showShop();
-            }
             return;
         }
         float horizontalInput = Input.GetAxis("Horizontal");
@@ -79,10 +35,8 @@ public class BasicMovements : MonoBehaviour
     public void Die()
     {
         Debug.Log("Die() called");
-        if (IsDead)
-        {
-            return;
-        }
+        if (IsDead) return;
+
         IsDead = true;
         animator.SetBool("IsDead", true);
         Debug.Log("Die called. IsDead param set to true");
@@ -110,18 +64,17 @@ public class BasicMovements : MonoBehaviour
 
         foreach (GameObject obj in GameObject.FindObjectsOfType<GameObject>())
         {
-            Debug.Log($"Checking object: {obj.name} with tag: {obj.tag}");
-            if (obj.CompareTag("GameController") || obj.CompareTag("GameOverUI") || obj.CompareTag("MainCamera") || obj.name == "EventSystem" || obj.CompareTag("ShopWindowUI") || obj.CompareTag("Player") || obj.name == "ShopWindow")
+            if (obj.CompareTag("GameController") || obj.CompareTag("GameOverUI") || obj.CompareTag("MainCamera") || obj.name == "EventSystem")
             {
-                Debug.Log($"Skipping: {obj.name}");
                 continue;
             }
-            if (obj != gameObject)
+            if (obj != this.gameObject)
             {
-                Debug.Log($"Disabling: {obj.name}");
                 obj.SetActive(false);
             }
         }
+        this.gameObject.SetActive(false);
+
         FindObjectOfType<GameOver>().GameOverNow();
     }
 }
