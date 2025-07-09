@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Collections;
 
 public class GameOver : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class GameOver : MonoBehaviour
     public LogicScript logicScript;
     public BasicMovements basicMovements;
     public GameObject shopWindowCanvas;
+    public FadeIn screenFade;
 
     void Start()
     {
@@ -32,11 +34,15 @@ public class GameOver : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-    public void startShowShop()
+    public void GoToShop()
     {
-        Debug.Log("go to shop clicked");
+        StartCoroutine(CutToShop());
+    }
+    public IEnumerator CutToShop()
+    {
+        yield return screenFade.fadeIn(0.5f);
         gameOverCanvas.SetActive(false);
         shopWindowCanvas.SetActive(true);
-        Time.timeScale = 0f;
+        yield return screenFade.FadeOut(0.5f);
     }
 }
