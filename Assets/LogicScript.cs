@@ -32,7 +32,8 @@ public class LogicScript : MonoBehaviour
     [ContextMenu("Lose A Life")]
     public void LoseLife()
     {
-        currentLives =- 1;
+        currentLives = currentLives - 1;
+        //Note: =- 1 sets Lives to -1 every time. -= 1 subtracts 1 from lives. oops
         livesText.text = "Lives: " + currentLives.ToString();
 
         if (currentLives <= 0)

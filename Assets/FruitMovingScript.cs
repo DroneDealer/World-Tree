@@ -4,7 +4,7 @@ public class FruitMovingScript : MonoBehaviour
 {
     public LogicScript Logic;
     public float moveSpeed = 3;
-    public float deadZone = -6;
+    public float deadZone = -3;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
