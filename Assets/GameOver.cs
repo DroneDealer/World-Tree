@@ -8,6 +8,7 @@ public class GameOver : MonoBehaviour
     public TextMeshProUGUI highScoreText;
     public LogicScript logicScript;
     public GameObject shopWindowCanvas;
+    public GameObject worldTreeCanvas;
     void Start()
     {
         gameOverCanvas.SetActive(false);
@@ -27,7 +28,11 @@ public class GameOver : MonoBehaviour
         Time.timeScale = 1f;
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
-
+    public void GoToWorldTree()
+    {
+        gameOverCanvas.SetActive(false);
+        worldTreeCanvas.SetActive(true);
+    }
     public void GoToShop()
     {
         gameOverCanvas.SetActive(false);

@@ -64,7 +64,7 @@ public class BasicMovements : MonoBehaviour
 
         foreach (GameObject obj in GameObject.FindObjectsOfType<GameObject>())
         {
-            if (obj.CompareTag("GameController") || obj.CompareTag("GameOverUI") || obj.CompareTag("MainCamera") || obj.name == "EventSystem" || obj.name == "Fade Control" || obj.name == "Fader")
+            if (obj.CompareTag("GameController") || obj.CompareTag("GameOverUI") || obj.CompareTag("MainCamera") || obj.name == "EventSystem" || obj.CompareTag("WorldTreeUI"))
             {
                 continue;
             }
