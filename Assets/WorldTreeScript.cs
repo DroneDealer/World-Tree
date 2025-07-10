@@ -7,6 +7,7 @@ public class WorldTreeScript : MonoBehaviour
     public GameObject WorldTreeCanvas;
     public GameObject gameOverCanvas;
     public GameObject worldTree;
+    public GameObject player;
 
     void Start()
     {
@@ -17,5 +18,6 @@ public class WorldTreeScript : MonoBehaviour
     {
         WorldTreeCanvas.SetActive(false);
         gameOverCanvas.SetActive(true);
+        player.SetActive(false);
     }
 }

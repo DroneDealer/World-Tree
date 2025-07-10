@@ -9,6 +9,8 @@ public class GameOver : MonoBehaviour
     public LogicScript logicScript;
     public GameObject shopWindowCanvas;
     public GameObject worldTreeCanvas;
+    public Transform treeLocation;
+    public GameObject player;
     void Start()
     {
         gameOverCanvas.SetActive(false);
@@ -32,6 +34,9 @@ public class GameOver : MonoBehaviour
     {
         gameOverCanvas.SetActive(false);
         worldTreeCanvas.SetActive(true);
+        Time.timeScale = 1f;
+        player.SetActive(true);
+        player.transform.position = treeLocation.position;
     }
     public void GoToShop()
     {

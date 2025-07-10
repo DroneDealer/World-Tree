@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class FruitScript : MonoBehaviour
 {
-    public int scoreValue = 1;
-    public int essenceAmount = 1;
+    //public int scoreValue = 1;
+    public int essenceAmount = 5;
     public bool IsBadFruit = false;
     public EssenceCurrencyManager essenceManager;
     public LogicScript Logic;
@@ -23,7 +23,7 @@ public class FruitScript : MonoBehaviour
         }
         else
         {
-            Logic.addScore(scoreValue);
+            Logic.addScore(essenceAmount);
             essenceManager.AddToEssenceAmount(essenceAmount);
             Destroy(gameObject);
         }
