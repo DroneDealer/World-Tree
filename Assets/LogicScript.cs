@@ -6,7 +6,7 @@ using Unity.VisualScripting;
 public class LogicScript : MonoBehaviour
 
 {
-    [Header("Score")]
+    [Header("Essence of Life")]
     public int playerScore;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI highScoreText;
@@ -15,7 +15,7 @@ public class LogicScript : MonoBehaviour
     public TextMeshProUGUI livesText;
     void Start()
     {
-        scoreText.text = "Score: " + playerScore.ToString();
+        scoreText.text = "Essence of Life: " + playerScore.ToString();
         livesText.text = "Lives: " + currentLives.ToString();
 
         int savedHighScore = PlayerPrefs.GetInt("highScore", 0);
@@ -26,7 +26,7 @@ public class LogicScript : MonoBehaviour
     public void addScore(int value)
     {
         playerScore += value;
-        scoreText.text = "Score: " + playerScore.ToString();
+        scoreText.text = "Essence of Life: " + playerScore.ToString();
     }
 
     [ContextMenu("Lose A Life")]

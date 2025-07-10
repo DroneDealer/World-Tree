@@ -7,6 +7,8 @@ TagManager:
   - Logic
   - GameOverUI
   - ShopWindowUI
+  - WorldTreeUI
+  - Transitions
   layers:
   - Default
   - TransparentFX

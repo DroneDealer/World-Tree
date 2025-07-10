@@ -6,6 +6,7 @@ public class WorldTreeScript : MonoBehaviour
 {
     public GameObject WorldTreeCanvas;
     public GameObject gameOverCanvas;
+    public GameObject worldTree;
 
     void Start()
     {

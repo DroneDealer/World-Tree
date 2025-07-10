@@ -11,7 +11,7 @@ public class EssenceCurrencyManager : MonoBehaviour
     public static EssenceCurrencyManager currencyProgram { get; private set; }
     private void UpdateEssence()
     {
-        essenceText.text = "Essence of Life: " + essenceAmount;
+        essenceText.text = "Total Essence of Life: " + essenceAmount;
     }
     void Start()
     {

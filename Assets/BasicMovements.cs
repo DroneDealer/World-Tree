@@ -3,14 +3,10 @@ using UnityEngine;
 
 public class BasicMovements : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public Animator animator;
     public float speed = 5f;
     private bool IsDead = false;
     private SpriteRenderer spriteRenderer;
-
-    // Update is called once per frame
-
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -68,12 +64,12 @@ public class BasicMovements : MonoBehaviour
             {
                 continue;
             }
-            if (obj != this.gameObject)
+            if (obj != gameObject)
             {
                 obj.SetActive(false);
             }
         }
-        this.gameObject.SetActive(false);
+        gameObject.SetActive(false);
 
         FindObjectOfType<GameOver>().GameOverNow();
     }

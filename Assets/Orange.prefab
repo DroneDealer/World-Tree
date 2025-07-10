@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5217758214098365422}
   - component: {fileID: 4171610036444642034}
   - component: {fileID: 95628671968541751}
-  - component: {fileID: 1886558108148981156}
   - component: {fileID: 493973592929771357}
   m_Layer: 0
   m_Name: Orange
@@ -152,21 +151,6 @@ MonoBehaviour:
   Logic: {fileID: 0}
   moveSpeed: 3
   deadZone: -3
---- !u!114 &1886558108148981156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9062289714753314430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63a780e8d8bae594eb6933e6cee4bd69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fruits: []
-  spawnRate: 2
-  widthOffset: 14
 --- !u!114 &493973592929771357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3204f93f13a3d03409cb8b0597a6329b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreValue: 2
+  scoreValue: 10
   essenceAmount: 10
   IsBadFruit: 0
   essenceManager: {fileID: 0}

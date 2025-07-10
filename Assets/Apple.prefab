@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3204f93f13a3d03409cb8b0597a6329b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreValue: 1
+  scoreValue: 5
   essenceAmount: 5
   IsBadFruit: 0
   essenceManager: {fileID: 0}
