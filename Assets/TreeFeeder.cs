@@ -1,4 +1,6 @@
+using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 public class TreeFeeder : MonoBehaviour
@@ -26,7 +28,7 @@ public class TreeFeeder : MonoBehaviour
         if (CurrentEssence > 0)
         {
             EssenceCurrencyManager.currencyProgram.SpendEssence(CurrentEssence);
-            essenceFed++;
+            essenceFed += CurrentEssence;
             PlayerPrefs.SetInt("EssenceFedToTree", essenceFed);
             PlayerPrefs.Save();
             UpdateEssenceFed();
@@ -40,8 +42,14 @@ public class TreeFeeder : MonoBehaviour
         else
         {
             Debug.Log("Not enough essence of life.");
-
+            NoFood.gameObject.SetActive(true);
+            HideNoFood(2f);
         }
+    }
+    private IEnumerator HideNoFood(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        NoFood.gameObject.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D thing)
     {

@@ -15,6 +15,7 @@ public class EssenceCurrencyManager : MonoBehaviour
     }
     void Start()
     {
+        essenceAmount = 2499;
         UpdateEssence();
     }
     private void Awake()

@@ -1,7 +1,5 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
-using Unity.VisualScripting;
 
 public class LogicScript : MonoBehaviour
 
@@ -15,7 +13,7 @@ public class LogicScript : MonoBehaviour
     public TextMeshProUGUI livesText;
     void Start()
     {
-        scoreText.text = "Essence of Life: " + playerScore.ToString();
+        scoreText.text = "Score: " + playerScore.ToString();
         livesText.text = "Lives: " + currentLives.ToString();
 
         int savedHighScore = PlayerPrefs.GetInt("highScore", 0);
@@ -26,7 +24,7 @@ public class LogicScript : MonoBehaviour
     public void addScore(int value)
     {
         playerScore += value;
-        scoreText.text = "Essence of Life: " + playerScore.ToString();
+        scoreText.text = "Score: " + playerScore.ToString();
     }
 
     [ContextMenu("Lose A Life")]
