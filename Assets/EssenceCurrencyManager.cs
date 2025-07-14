@@ -5,17 +5,30 @@ using TMPro;
 
 public class EssenceCurrencyManager : MonoBehaviour
 {
-    public int essenceAmount = 0;
+    public int essenceAmount;
     public TextMeshProUGUI essenceText;
     public event Action<int> OnEssenceAmountChanged;
     public static EssenceCurrencyManager currencyProgram { get; private set; }
     private void UpdateEssence()
     {
+        if (essenceText == null || essenceText.Equals(null))
+        {
+            GameObject foundText = GameObject.Find("Essencekeeper");
+            if (foundText != null)
+            {
+                essenceText = foundText.GetComponent<TextMeshProUGUI>();
+            }
+            else
+            {
+                Debug.LogWarning("EssenceText GameObject not found in this scene.");
+                return;
+            }
+        }
+        Debug.Log("Updating Essence Text component: " + essenceText.name + " → " + essenceText.text);
         essenceText.text = "Total Essence of Life: " + essenceAmount;
     }
     void Start()
     {
-        essenceAmount = 2499;
         UpdateEssence();
     }
     private void Awake()

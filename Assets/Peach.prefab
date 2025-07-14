@@ -163,8 +163,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3204f93f13a3d03409cb8b0597a6329b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreValue: 15
   essenceAmount: 15
   IsBadFruit: 0
   essenceManager: {fileID: 0}
   Logic: {fileID: 0}
+  audioSource: {fileID: 0}
+  grabFruit: {fileID: 8300000, guid: 73bdd32c83aea444e953644a37c5d3de, type: 3}

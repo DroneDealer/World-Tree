@@ -11,13 +11,20 @@ public class GameOver : MonoBehaviour
     public GameObject worldTreeCanvas;
     public Transform treeLocation;
     public GameObject player;
+    public AudioSource audioSource;
+    public AudioClip gameOVerMusic;
     void Start()
     {
+        audioSource = GameObject.FindObjectOfType<AudioSource>();
         gameOverCanvas.SetActive(false);
     }
 
     public void GameOverNow()
     {
+        //if (audioSource != null && gameOVerMusic != null)
+        //{
+            //audioSource.Play();
+        //}
         logicScript.CheckHighScore();
         gameOverCanvas.SetActive(true);
         Time.timeScale = 0f;

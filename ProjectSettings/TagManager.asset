@@ -8,7 +8,7 @@ TagManager:
   - GameOverUI
   - ShopWindowUI
   - WorldTreeUI
-  - Transitions
+  - Managers
   layers:
   - Default
   - TransparentFX

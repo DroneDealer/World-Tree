@@ -60,7 +60,7 @@ public class BasicMovements : MonoBehaviour
 
         foreach (GameObject obj in GameObject.FindObjectsOfType<GameObject>())
         {
-            if (obj.CompareTag("GameController") || obj.CompareTag("GameOverUI") || obj.CompareTag("MainCamera") || obj.name == "EventSystem" || obj.CompareTag("WorldTreeUI"))
+            if (obj.CompareTag("GameController") || obj.CompareTag("GameOverUI") || obj.CompareTag("MainCamera") || obj.name == "EventSystem" || obj.CompareTag("WorldTreeUI") || obj.CompareTag("Managers"))
             {
                 continue;
             }

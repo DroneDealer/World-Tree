@@ -12,10 +12,15 @@ public class TreeFeeder : MonoBehaviour
     public TextMeshProUGUI NeedForFeed;
     public TextMeshProUGUI NoFood;
     //Like "need for speed". from Sonic. Haha
+    public AudioSource audioSource;
+    public AudioClip treeGrowth;
+    public AudioClip noFood;
     void Start()
     {
+        audioSource = GameObject.FindObjectOfType<AudioSource>();
         essenceFed = PlayerPrefs.GetInt("EssenceFedToTree", 0);
         FeedButton.SetActive(false);
+        NoFood.gameObject.SetActive(false);
         UpdateEssenceFed();
     }
     void UpdateEssenceFed()
@@ -41,6 +46,14 @@ public class TreeFeeder : MonoBehaviour
         }
         else
         {
+            if (audioSource != null && noFood != null)
+            {
+                audioSource.PlayOneShot(noFood);
+            }
+            else
+            {
+                Debug.Log("Either your Audio Source or your Audio Clip is missing!");
+            }
             Debug.Log("Not enough essence of life.");
             NoFood.gameObject.SetActive(true);
             HideNoFood(2f);
@@ -48,6 +61,7 @@ public class TreeFeeder : MonoBehaviour
     }
     private IEnumerator HideNoFood(float delay)
     {
+        NoFood.gameObject.SetActive(true);
         yield return new WaitForSeconds(delay);
         NoFood.gameObject.SetActive(false);
     }

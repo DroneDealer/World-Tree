@@ -11,8 +11,13 @@ public class LogicScript : MonoBehaviour
     [Header("Lives")]
     public int currentLives;
     public TextMeshProUGUI livesText;
+    public AudioSource audioSource;
+    public AudioClip loseALifeSoundEffect;
+    public AudioClip gameOver;
     void Start()
     {
+        audioSource = GameObject.FindObjectOfType<AudioSource>();
+
         scoreText.text = "Score: " + playerScore.ToString();
         livesText.text = "Lives: " + currentLives.ToString();
 
@@ -30,12 +35,28 @@ public class LogicScript : MonoBehaviour
     [ContextMenu("Lose A Life")]
     public void LoseLife()
     {
+        if (audioSource != null && loseALifeSoundEffect != null)
+        {
+            audioSource.PlayOneShot(loseALifeSoundEffect);
+        }
+        else
+        {
+            Debug.Log("Either your Audio Source or your Audio Clip are unassigned!");
+        }
         currentLives = currentLives - 1;
         //Note: =- 1 sets Lives to -1 every time. -= 1 subtracts 1 from lives. oops
         livesText.text = "Lives: " + currentLives.ToString();
 
         if (currentLives <= 0)
         {
+            if (audioSource != null && gameOver != null)
+            {
+                audioSource.PlayOneShot(gameOver);
+            }
+            else
+            {
+                Debug.Log("Either your Audio Manager or your Audio Clip are unassigned!");
+            }
             CheckHighScore();
             Debug.Log("Game Over!");
             GameObject.FindWithTag("Player").GetComponent<BasicMovements>().Die();
