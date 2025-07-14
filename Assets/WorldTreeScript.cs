@@ -10,7 +10,6 @@ public class WorldTreeScript : MonoBehaviour
     public GameObject player1;
     public AudioSource audioSoruce;
     public AudioClip WorldTreeMusic;
-
     void Start()
     {
         player1.SetActive(true);

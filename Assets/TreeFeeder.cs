@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Runtime.CompilerServices;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -15,6 +16,7 @@ public class TreeFeeder : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip treeGrowth;
     public AudioClip noFood;
+    public DialogueScript treeDialogueManager;
     void Start()
     {
         audioSource = GameObject.FindObjectOfType<AudioSource>();
@@ -88,5 +90,10 @@ public class TreeFeeder : MonoBehaviour
         essenceFed = 0;
         UpdateEssenceFed();
         Debug.Log("Tree essence fed reset");
+    }
+    private IEnumerator BeginDialogue()
+    {
+        yield return new WaitForSeconds(1f);
+        //DialogueScript.dialogueBubble.SetActive(true);
     }
 }
