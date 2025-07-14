@@ -103,12 +103,12 @@ TextureImporter:
       name: ShopWindow2 (1)_0
       rect:
         serializedVersion: 2
-        x: 750
-        y: 357
-        width: 1117
-        height: 643
+        x: 882
+        y: 346
+        width: 985
+        height: 654
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d04ec566643b27f4fa111477c479cd2b
     internalID: 0
     vertices: []
     indices: 
