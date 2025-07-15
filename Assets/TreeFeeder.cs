@@ -17,6 +17,8 @@ public class TreeFeeder : MonoBehaviour
     public AudioClip treeGrowth;
     public AudioClip noFood;
     public DialogueScript treeDialogueManager;
+    public GameObject ReturnButton;
+    public GameObject ResetAllProgressButton;
     void Start()
     {
         audioSource = GameObject.FindObjectOfType<AudioSource>();
@@ -47,7 +49,7 @@ public class TreeFeeder : MonoBehaviour
             Debug.Log("Fed tree. Progress: " + essenceFed + " / " + essenceCost);
             if (essenceFed >= essenceCost)
             {
-                treeAnimator.SetTrigger("IsGrown");
+                treeAnimator.SetTrigger("Grow");
                 treeAnimator.SetBool("AlreadyGrown", true);
                 PlayerPrefs.SetInt("TreeGrown", 1); // saves state for next time
                 PlayerPrefs.Save();
@@ -104,6 +106,9 @@ public class TreeFeeder : MonoBehaviour
     private IEnumerator BeginDialogue()
     {
         yield return new WaitForSeconds(1.5f);
+        FeedButton.SetActive(false);
+        ReturnButton.SetActive(false);
+        ResetAllProgressButton.SetActive(false);
         treeDialogueManager.dialogueBubble.SetActive(true);
         treeDialogueManager.textBox.gameObject.SetActive(true);
         treeDialogueManager.StartCoroutine(treeDialogueManager.TypeText());

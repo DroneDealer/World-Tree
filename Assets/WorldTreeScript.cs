@@ -23,4 +23,13 @@ public class WorldTreeScript : MonoBehaviour
         gameOverCanvas.SetActive(true);
         player1.SetActive(false);
     }
+        public void ResetAllProgress()
+    {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+        Debug.Log("All proress reset");
+        WorldTreeCanvas.SetActive(false);
+        gameOverCanvas.SetActive(true);
+        player1.SetActive(false);
+    }
 }

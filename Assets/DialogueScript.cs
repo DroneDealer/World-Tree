@@ -15,6 +15,9 @@ public class DialogueScript : MonoBehaviour
     public AudioClip clickClip;
     public AudioSource audioSource;
     public GameObject UIDialogueHolder;
+    public GameObject FeedButton;
+    public GameObject returnButton;
+    public GameObject ResetAllProgressButton;
     private void Start()
     {
         UIDialogueHolder.SetActive(false);
@@ -64,6 +67,9 @@ public class DialogueScript : MonoBehaviour
             textBox.gameObject.SetActive(false);
             continueIndicator.SetActive(false);
             dialogueBubble.SetActive(false);
+            FeedButton.SetActive(true);
+            returnButton.SetActive(true);
+            ResetAllProgressButton.SetActive(true);
             Debug.Log("End of dialogue");
         }
     }

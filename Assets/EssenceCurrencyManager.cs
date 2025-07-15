@@ -23,6 +23,7 @@ public class EssenceCurrencyManager : MonoBehaviour
                 Debug.LogWarning("EssenceText GameObject not found in this scene.");
                 return;
             }
+            //Just to be safe. I added this earlier to save me trouble in case I forgot to assign the TextMeshPro (it kept returning a lot of errors)
         }
         Debug.Log("Updating Essence Text component: " + essenceText.name + " → " + essenceText.text);
         essenceText.text = "Total Essence of Life: " + essenceAmount;
