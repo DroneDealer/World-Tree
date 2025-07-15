@@ -25,11 +25,10 @@ public class TreeFeeder : MonoBehaviour
         NoFood.gameObject.SetActive(false);
         UpdateEssenceFed();
     }
-    void Awake()
+    void OnEnable()
     {
-        // Changing the trigger to a bool value so that the last frame in the animation will hold wtihout reloading the whole thing
-        bool isGrown = PlayerPrefs.GetInt("TreeGrown", 0) == 1;
-        treeAnimator.SetBool("IsGrown", isGrown);
+        bool hasAlreadyGrown = PlayerPrefs.GetInt("TreeGrown", 0) == 1;
+        treeAnimator.SetBool("AlreadyGrown", hasAlreadyGrown);
     }
     void UpdateEssenceFed()
     {
@@ -48,8 +47,9 @@ public class TreeFeeder : MonoBehaviour
             Debug.Log("Fed tree. Progress: " + essenceFed + " / " + essenceCost);
             if (essenceFed >= essenceCost)
             {
-                treeAnimator.SetBool("IsGrown", true);
-                PlayerPrefs.SetInt("TreeGrown", 1);
+                treeAnimator.SetTrigger("IsGrown");
+                treeAnimator.SetBool("AlreadyGrown", true);
+                PlayerPrefs.SetInt("TreeGrown", 1); // saves state for next time
                 PlayerPrefs.Save();
                 Debug.Log("Tree has grown!");
                 StartCoroutine(BeginDialogue());
@@ -95,6 +95,7 @@ public class TreeFeeder : MonoBehaviour
     public void ResetEssenceFed()
     {
         PlayerPrefs.DeleteKey("EssenceFedToTree");
+        PlayerPrefs.DeleteKey("TreeGrown");
         PlayerPrefs.Save();
         essenceFed = 0;
         UpdateEssenceFed();

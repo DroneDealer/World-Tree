@@ -11,6 +11,7 @@ public class GameOver : MonoBehaviour
     public GameObject worldTreeCanvas;
     public Transform treeLocation;
     public GameObject player;
+    public GameObject player1;
     public AudioSource audioSource;
     public AudioClip gameOVerMusic;
     void Start()
@@ -42,7 +43,8 @@ public class GameOver : MonoBehaviour
         gameOverCanvas.SetActive(false);
         worldTreeCanvas.SetActive(true);
         Time.timeScale = 1f;
-        player.SetActive(true);
+        player.SetActive(false);
+        player1.SetActive(true);
         player.transform.position = treeLocation.position;
     }
     public void GoToShop()
