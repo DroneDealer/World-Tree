@@ -8,11 +8,11 @@
       "hash": "d9a1a3cc5c997fe7a9ea171a9a3970d24793dba4"
     },
     "com.unity.2d.animation": {
-      "version": "10.2.0",
+      "version": "11.0.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.2d.common": "9.1.0",
+        "com.unity.2d.common": "10.0.0",
         "com.unity.2d.sprite": "1.0.0",
         "com.unity.collections": "1.2.4",
         "com.unity.modules.animation": "1.0.0",
@@ -21,11 +21,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.2d.aseprite": {
-      "version": "1.2.4",
+      "version": "1.2.5",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.2d.common": "6.0.6",
+        "com.unity.2d.common": "10.0.0",
         "com.unity.2d.sprite": "1.0.0",
         "com.unity.2d.tilemap": "1.0.0",
         "com.unity.mathematics": "1.2.6",
@@ -34,7 +34,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.2d.common": {
-      "version": "9.1.0",
+      "version": "10.0.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -47,11 +47,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.2d.psdimporter": {
-      "version": "10.1.0",
+      "version": "10.1.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.2d.common": "9.1.0",
+        "com.unity.2d.common": "10.0.0",
         "com.unity.2d.sprite": "1.0.0",
         "com.unity.2d.tilemap": "1.0.0"
       },
@@ -64,11 +64,11 @@
       "dependencies": {}
     },
     "com.unity.2d.spriteshape": {
-      "version": "10.1.0",
+      "version": "11.0.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.2d.common": "9.1.0",
+        "com.unity.2d.common": "10.0.0",
         "com.unity.mathematics": "1.1.0",
         "com.unity.modules.physics2d": "1.0.0"
       },
@@ -84,7 +84,7 @@
       }
     },
     "com.unity.2d.tilemap.extras": {
-      "version": "4.3.0",
+      "version": "4.3.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -95,7 +95,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.burst": {
-      "version": "1.8.21",
+      "version": "1.8.23",
       "depth": 2,
       "source": "registry",
       "dependencies": {
