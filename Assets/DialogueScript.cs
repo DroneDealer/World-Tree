@@ -14,7 +14,11 @@ public class DialogueScript : MonoBehaviour
     private bool isTyping = false;
     public AudioClip clickClip;
     public AudioSource audioSource;
-
+    public GameObject UIDialogueHolder;
+    private void Start()
+    {
+        UIDialogueHolder.SetActive(false);
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && !isTyping)
@@ -25,7 +29,11 @@ public class DialogueScript : MonoBehaviour
 
     public IEnumerator TypeText()
     {
+        UIDialogueHolder.transform.SetAsLastSibling();
         isTyping = true;
+        UIDialogueHolder.SetActive(true);
+        dialogueBubble.SetActive(true);
+        textBox.gameObject.SetActive(true);
         continueIndicator.SetActive(false);
         textBox.text = "";
 
