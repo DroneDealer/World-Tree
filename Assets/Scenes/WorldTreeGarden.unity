@@ -3610,7 +3610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1217508182}
-  speed: 5
+  speed: 7.5
 --- !u!95 &1217508182
 Animator:
   serializedVersion: 7
@@ -4194,7 +4194,7 @@ GameObject:
   - component: {fileID: 1395016950}
   - component: {fileID: 1395016949}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: GameplayCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5375,7 +5375,7 @@ MonoBehaviour:
     weight: 5
   - fruitPrefab: {fileID: 5253994894029541736, guid: ddea7b9ba1714074cbf90d36d348d168, type: 3}
     weight: 1
-  spawnRate: 2
+  spawnRate: 1
   widthOffset: 7
 --- !u!4 &1918522034
 Transform:
