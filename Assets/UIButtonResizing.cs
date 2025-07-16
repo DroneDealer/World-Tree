@@ -14,7 +14,7 @@ public class UIButtonResizing : MonoBehaviour
     }
     void LateUpdate()
     {
-        if (parentRectTransform != null || childRectTransform != null)
+        if (parentRectTransform != null && childRectTransform != null)
         {
             float parentWidth = parentRectTransform.rect.width / 1920f;
             float parentHeight = parentRectTransform.rect.height / 1080f;
