@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class TreeFeeder : MonoBehaviour
 {
     public Animator treeAnimator;
-    public int essenceCost = 5000;
+    public int essenceCost = 2500;
     private int essenceFed = 0;
     public GameObject FeedButton;
     public TextMeshProUGUI NeedForFeed;
