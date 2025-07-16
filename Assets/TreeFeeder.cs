@@ -47,7 +47,7 @@ public class TreeFeeder : MonoBehaviour
             PlayerPrefs.Save();
             UpdateEssenceFed();
             Debug.Log("Fed tree. Progress: " + essenceFed + " / " + essenceCost);
-            if (essenceFed >= essenceCost)
+            if (essenceFed >= essenceCost && PlayerPrefs.GetInt("TreeGrown", 0) != 1)
             {
                 treeAnimator.SetTrigger("Grow");
                 treeAnimator.SetBool("AlreadyGrown", true);
@@ -105,7 +105,7 @@ public class TreeFeeder : MonoBehaviour
     }
     private IEnumerator BeginDialogue()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.5f); // optional delay
         FeedButton.SetActive(false);
         ReturnButton.SetActive(false);
         ResetAllProgressButton.SetActive(false);

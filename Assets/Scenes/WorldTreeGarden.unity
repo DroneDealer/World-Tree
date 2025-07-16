@@ -1345,7 +1345,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &416142906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1425,10 +1425,11 @@ RectTransform:
   - {fileID: 934378779}
   - {fileID: 1039595959}
   - {fileID: 376492199}
-  - {fileID: 1849365270}
   - {fileID: 136060012}
   - {fileID: 225751612}
   - {fileID: 479100561}
+  - {fileID: 1787703318}
+  - {fileID: 1849365270}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1577,7 +1578,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 32767
   m_TargetDisplay: 0
 --- !u!1 &519420028
 GameObject:
@@ -2853,7 +2854,7 @@ MonoBehaviour:
   noFood: {fileID: 8300000, guid: 0e924e3cf235f6b4f9795bd7e55d0c6a, type: 3}
   treeDialogueManager: {fileID: 1345643772}
   ReturnButton: {fileID: 934378778}
-  ResetAllProgressButton: {fileID: 0}
+  ResetAllProgressButton: {fileID: 1039595955}
 --- !u!61 &977057154
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3561,7 +3562,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1217508181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4818,7 +4819,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1787703311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5030,11 +5031,11 @@ Transform:
   m_GameObject: {fileID: 1787703310}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.7, y: -2.256, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 108}
+  m_LocalPosition: {x: -615.6, y: -243.64801, z: 0}
+  m_LocalScale: {x: 648, y: 648, z: 648}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 416142909}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1843822925
 GameObject:
@@ -5185,6 +5186,7 @@ GameObject:
   - component: {fileID: 1849365271}
   - component: {fileID: 1849365273}
   - component: {fileID: 1849365274}
+  - component: {fileID: 1849365275}
   m_Layer: 0
   m_Name: World Tree
   m_TagString: Untagged
@@ -5202,7 +5204,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -343, z: -9720}
-  m_LocalScale: {x: 1000, y: 850, z: 108}
+  m_LocalScale: {x: 1000, y: 850, z: 648}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 977057152}
@@ -5343,6 +5345,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca1a57e3c9d582c45a7cb27124077d04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!210 &1849365275
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849365269}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 32767
+  m_SortAtRoot: 0
 --- !u!1 &1912629154
 GameObject:
   m_ObjectHideFlags: 0
@@ -5998,6 +6012,5 @@ SceneRoots:
   - {fileID: 1578492967}
   - {fileID: 1420889553}
   - {fileID: 416142909}
-  - {fileID: 1787703318}
   - {fileID: 719838394}
   - {fileID: 1345643773}

@@ -15,6 +15,9 @@ public class WorldTreeScript : MonoBehaviour
         player1.SetActive(true);
         audioSoruce = GameObject.FindObjectOfType<AudioSource>();
         WorldTreeCanvas.SetActive(false);
+        Vector3 fixedTreePosition = worldTree.transform.position;
+        fixedTreePosition.z = 0; // Locks Z psition to 0. I am not quite sure why but it keeps turning into Z = -9720.
+        worldTree.transform.position = fixedTreePosition;
     }
 
     public void ReturnToGarden()
