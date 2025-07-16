@@ -619,7 +619,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Essence Fed: 0 / 5000'
+  m_text: 'Essence Fed: 0 / 2500'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2aee7e39f906ef14c8af6db04cd7d8d7, type: 2}
   m_sharedMaterial: {fileID: 7489084668684558496, guid: 2aee7e39f906ef14c8af6db04cd7d8d7, type: 2}
@@ -1193,6 +1193,7 @@ GameObject:
   - component: {fileID: 376492202}
   - component: {fileID: 376492201}
   - component: {fileID: 376492200}
+  - component: {fileID: 376492203}
   m_Layer: 5
   m_Name: FeedTree
   m_TagString: WorldTreeUI
@@ -1217,7 +1218,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 89.29999}
+  m_AnchoredPosition: {x: 0, y: 90}
   m_SizeDelta: {x: 890.51, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &376492200
@@ -1314,6 +1315,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 376492198}
   m_CullTransparentMesh: 1
+--- !u!114 &376492203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376492198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f2487d4ee64a247a31801f36dd1faf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &416142905
 GameObject:
   m_ObjectHideFlags: 0
@@ -2652,6 +2665,7 @@ GameObject:
   - component: {fileID: 934378782}
   - component: {fileID: 934378781}
   - component: {fileID: 934378780}
+  - component: {fileID: 934378783}
   m_Layer: 5
   m_Name: Return to Garden
   m_TagString: WorldTreeUI
@@ -2773,6 +2787,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934378778}
   m_CullTransparentMesh: 1
+--- !u!114 &934378783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934378778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f2487d4ee64a247a31801f36dd1faf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &977057151
 GameObject:
   m_ObjectHideFlags: 0
@@ -2887,6 +2913,7 @@ GameObject:
   - component: {fileID: 1039595958}
   - component: {fileID: 1039595957}
   - component: {fileID: 1039595956}
+  - component: {fileID: 1039595960}
   m_Layer: 5
   m_Name: ResetAllProgress
   m_TagString: WorldTreeUI
@@ -3008,6 +3035,18 @@ RectTransform:
   m_AnchoredPosition: {x: 261, y: 90.149994}
   m_SizeDelta: {x: 480.97998, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1039595960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039595955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f2487d4ee64a247a31801f36dd1faf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1090506748
 GameObject:
   m_ObjectHideFlags: 0
