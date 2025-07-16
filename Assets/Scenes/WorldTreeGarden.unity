@@ -3003,10 +3003,10 @@ RectTransform:
   - {fileID: 1843822926}
   m_Father: {fileID: 416142909}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 261, y: 90.149994}
-  m_SizeDelta: {x: 480.98, y: 175}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -699, y: -449.85}
+  m_SizeDelta: {x: 480.97998, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1090506748
 GameObject:
@@ -3254,10 +3254,10 @@ RectTransform:
   - {fileID: 36296814}
   m_Father: {fileID: 419613978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -612.17, y: -332}
-  m_SizeDelta: {x: -1224.3401, y: -708.57}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 297.83002, y: -332}
+  m_SizeDelta: {x: 595.6599, y: 197.43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1177573785
 MonoBehaviour:
@@ -3757,6 +3757,7 @@ GameObject:
   - component: {fileID: 1321333266}
   - component: {fileID: 1321333265}
   - component: {fileID: 1321333264}
+  - component: {fileID: 1321333270}
   m_Layer: 0
   m_Name: Player (1)
   m_TagString: Player
@@ -3969,6 +3970,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1321333270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321333262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1a57e3c9d582c45a7cb27124077d04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  background: {fileID: 0}
 --- !u!1 &1332907071
 GameObject:
   m_ObjectHideFlags: 0
@@ -4875,10 +4889,10 @@ RectTransform:
   - {fileID: 2114396772}
   m_Father: {fileID: 419613978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -612.17, y: -113}
-  m_SizeDelta: {x: -1224.3401, y: -708.57}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 297.83002, y: -113}
+  m_SizeDelta: {x: 595.6599, y: 197.43}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1748954618
 MonoBehaviour:
@@ -5134,6 +5148,7 @@ GameObject:
   - component: {fileID: 1849365272}
   - component: {fileID: 1849365271}
   - component: {fileID: 1849365273}
+  - component: {fileID: 1849365274}
   m_Layer: 0
   m_Name: World Tree
   m_TagString: Untagged
@@ -5280,6 +5295,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.3, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1849365274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849365269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1a57e3c9d582c45a7cb27124077d04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  background: {fileID: 0}
 --- !u!1 &1912629154
 GameObject:
   m_ObjectHideFlags: 0
