@@ -6,8 +6,6 @@ public class FruitSpawnScript : MonoBehaviour
     public float spawnRate = 2;
     private float timer = 0;
     public float widthOffset = 14;
-
-    // Update is called once per frame
     void Update()
     {
         if (fruits == null || fruits.Length == 0)

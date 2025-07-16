@@ -27,3 +27,4 @@ public class UIButtonResizing : MonoBehaviour
         }
     }
 }
+// This can technically be used for any UI but this is all I needed it for since UI backgrounds seem to size automatically

@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class Resizing : MonoBehaviour
 {
-    public Sprite background;
-    //added this so the WebGL wouldn't strip it.
     private Vector3 initialScale;
     private float initialCameraSize;
     void Start()
@@ -17,3 +15,4 @@ public class Resizing : MonoBehaviour
         transform.localScale = initialScale * scaleFactor;
     }
 }
+//Note: this is for Non - UI objects only - I use it for my player and Fruit objects, as well as other animation sprites.

@@ -1397,7 +1397,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 519420031}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 10
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -3780,7 +3780,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca1a57e3c9d582c45a7cb27124077d04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 0}
 --- !u!1 &1321333262
 GameObject:
   m_ObjectHideFlags: 0
@@ -4021,7 +4020,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca1a57e3c9d582c45a7cb27124077d04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 0}
 --- !u!1 &1332907071
 GameObject:
   m_ObjectHideFlags: 0
@@ -4338,7 +4336,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 519420031}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 10
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -4538,7 +4536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2c3b3162c8ab0d4e8fffe8d4cb294be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  essenceAmount: 0
+  essenceAmount: 2500
   essenceText: {fileID: 120553970}
 --- !u!4 &1578492967
 Transform:
@@ -5346,7 +5344,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca1a57e3c9d582c45a7cb27124077d04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 0}
 --- !u!1 &1912629154
 GameObject:
   m_ObjectHideFlags: 0
@@ -5458,7 +5455,7 @@ MonoBehaviour:
     weight: 3
   - fruitPrefab: {fileID: 5253994894029541736, guid: ddea7b9ba1714074cbf90d36d348d168, type: 3}
     weight: 1
-  spawnRate: 1.5
+  spawnRate: 1
   widthOffset: 7
 --- !u!4 &1918522034
 Transform:
