@@ -18,7 +18,7 @@ The idea for this game actually came to me in early June, when I was cooking up 
 ## Gameplay
 - The fruits you collect in this game are each worth a unique amount.
   - 🍎 Apples are worth 5 points and fall the slowest,
-  -🍊 Oranges are worth 10 points,
+  - 🍊 Oranges are worth 10 points,
   - 🍑 Peaches are worth 15 points and fall the fastest!
 - You have 5 lives - every time you fail to catch a fruit, you lose a life.
 - Feed 2500x Essence of Life to the tree to fully restore it.
